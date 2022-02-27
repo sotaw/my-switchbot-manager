@@ -1,4 +1,4 @@
-service: display_power_switcher
+service: display-power-switcher
 
 plugins:
   - serverless-offline

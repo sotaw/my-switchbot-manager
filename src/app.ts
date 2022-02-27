@@ -8,6 +8,8 @@ const router = express.Router()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+const switchBotToken = process.env.SWITCHBOT_TOKEN || ''
+
 app.post('/switch', async (req: express.Request, res: express.Response) => {
     const body = req.body as { token: string }
     if (body.token !== process.env.AUTH_TOKEN) {
@@ -22,7 +24,7 @@ app.post('/switch', async (req: express.Request, res: express.Response) => {
             `https://api.switch-bot.com/v1.0/devices/${process.env.DEVICE_ID}/status`,
             {
                 headers: {
-                    authorization: process.env.SWITCHBOT_TOKEN
+                    authorization: switchBotToken
                 }
             }
         )).data as { body: { power: string } }
@@ -38,7 +40,7 @@ app.post('/switch', async (req: express.Request, res: express.Response) => {
                 {command: "turnOff", parameter: "default", commandType: "command"},
                 {
                     headers: {
-                        authorization: process.env.SWITCHBOT_TOKEN
+                        authorization: switchBotToken
                     },
                 }
             )
@@ -48,7 +50,7 @@ app.post('/switch', async (req: express.Request, res: express.Response) => {
                 {command: "turnOn", parameter: "default", commandType: "command"},
                 {
                     headers: {
-                        authorization: process.env.SWITCHBOT_TOKEN
+                        authorization: switchBotToken
                     }
                 }
             )

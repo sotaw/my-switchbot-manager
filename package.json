@@ -1,5 +1,5 @@
 {
-  "name": "display_power_switcher",
+  "name": "my-switchbot-manager",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sotaw/display_power_switcher.git"
+    "url": "git+https://github.com/sotaw/my-switchbot-manager.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sotaw/display_power_switcher/issues"
+    "url": "https://github.com/sotaw/my-switchbot-manager/issues"
   },
-  "homepage": "https://github.com/sotaw/display_power_switcher#readme",
+  "homepage": "https://github.com/sotaw/my-switchbot-manager#readme",
   "dependencies": {
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1048.0",

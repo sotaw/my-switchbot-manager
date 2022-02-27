@@ -1,4 +1,4 @@
-service: display-power-switcher
+service: it
 
 plugins:
   - serverless-offline
@@ -11,10 +11,6 @@ provider:
   stage: ${opt:stage, self:custom.defaultStage}
   profile: ${opt:profile, self:custom.defaultProfile}
   stackName: ${self:service}-${self:provider.stage}
-  environment:
-    AUTH_TOKEN: ${env:AUTH_TOKEN}
-    DEVICE_ID: ${env:DEVICE_ID}
-    SWITCHBOT_TOKEN: ${env:SWITCHBOT_TOKEN}
 
 custom:
   defaultStage: dev
@@ -38,7 +34,6 @@ functions:
       - http:
           path: /{proxy+}
           method: any
-
 
 #package:
 #  exclude:

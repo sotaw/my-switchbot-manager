@@ -23,9 +23,7 @@ jobs:
           npm install
 
       - name: serverless deploy
-        uses: serverless/github-action@v2
-        with:
-          args: deploy
+        run: npx sls deploy
         env:
           SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -33,4 +31,3 @@ jobs:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           DEVICE_ID: ${{ secrets.DEVICE_ID }}
           SWITCHBOT_TOKEN: ${{ secrets.SWITCHBOT_TOKEN }}
-          AWS_SDK_LOAD_CONFIG: 0

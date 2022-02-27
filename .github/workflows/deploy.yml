@@ -28,3 +28,6 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          DEVICE_ID: ${{ secrets.DEVICE_ID }}
+          SWITCHBOT_TOKEN: ${{ secrets.SWITCHBOT_TOKEN }}
